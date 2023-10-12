@@ -1,0 +1,255 @@
+@charset "utf-8";
+*
+{
+	margin:0;
+	padding:0;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+	box-sizing:border-box;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+
+body
+{
+	background-color:aliceblue;
+	background-image:url(../images/bg.jpg);
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-size:100% 100%;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align: justify;
+}
+
+
+.heading
+{
+	color:rgb(119, 112, 103);
+	font-size: 40px;
+	text-align: center;
+	padding: 10px;
+}
+
+.container
+{
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 15px;
+	align-items: flex-start;
+	padding: 5px 5px;
+}
+
+.container .main-video
+{
+	background: #fff;
+	border-radius: 5px;
+	padding: 10px;
+	direction: rtl;	
+	text-align: justify;
+}
+
+.container .main-video video
+{
+	width: 100%;
+	border-radius: 5px;
+}
+
+.container .main-video .title
+{
+	color:rgb(119, 112, 103);
+	font-size: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.container .video-list
+{
+	background: #fff;
+	border-radius: 5px;
+	height: 520px;
+	overflow-y: scroll;	
+	direction: rtl;	
+	text-align: right;
+}
+
+.container .video-list .vid video
+{
+	width: 100px;
+	border-radius: 5px;
+}
+
+.container .video-list::-webkit-scrollbar
+{
+	width: 7px;
+}
+
+.container .video-list::-webkit-scrollbar-track
+{
+	background: #ccc;
+	border-radius: 50px;
+}
+.container .video-list::-webkit-scrollbar-thumb
+{
+	background: #666;
+	border-radius: 50px;
+}
+
+.container .video-list .vid 
+{
+	display: flex;
+	gap: 15px;
+	align-items:center;
+	background: #ccc;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid rgba(0, 0, 0,0.1);
+	cursor: pointer;
+}
+
+.container .video-list .vid:hover
+{
+	background: #fff;
+}
+
+.container .video-list .vid.active
+{
+	background: #8dc2ff;
+}
+
+.container .video-list .vid.active .title
+{
+	color: #fff;
+}
+
+.container .video-list .vid .title
+{
+	color: #000;
+	font-size: 20px;
+}
+
+
+
+@media (max-width:991px) {
+	.container
+	{
+		grid-template-columns: 1.5fr 1fr;
+		padding:10px;
+	}	
+}
+
+
+@media (max-width:768px) {
+	.container
+	{
+		grid-template-columns: 1fr;
+	}	
+}
+
+
+a {text-decoration:none; color:rgb(16, 85, 177);}
+a:hover {color: #051b7c;}
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*
+ul{
+	background-color:  rgb(255, 255, 255,1);
+	border-radius: 10px;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: -7px 9px 17px 0px #00000017;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+	cursor: pointer;
+  }
+  li a{
+	display: inline-block;
+	padding:5px;
+	text-decoration: none;
+	color: black;
+  }
+  li:hover a{
+	color: rgb(24, 10, 148);
+  }
+
+  li:visited a{
+	color: rgb(111, 11, 204);
+  }
+
+  nav{
+	position: relative;
+  }
+  .icon{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: -80px;
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	background-color: rgb(255, 255, 255,.5);
+	background-image: url(../images/icon.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 50%;
+	cursor: pointer;
+	box-shadow: 0px 0px 17px 0px #00000017;
+	transition: .5s ease transform;
+  }
+  .icon.close{
+	transform:translateY(-50%) rotate(360deg);
+	background-image:  url(../images/icon.png);
+  }
+
+  ul{
+	width: 100%;
+	overflow: hidden;
+	transform: translateX(100px);
+	opacity: 0;
+	pointer-events: none;
+	transition:.5s ease;
+	padding: 10px;
+  }
+  
+  nav.show ul{
+	width: 100%;
+	transform: translate(1px);
+	opacity: 1;
+	pointer-events: all;
+	font-size: 20px;
+  }
+  nav{
+	position: absolute;
+	top: 10px;
+	right: 10%;
+	width: 90%;
+  }
+
+  */
+  
+  @media (max-width:768px){
+	li a{
+		padding:5px;
+	}
+	nav ul{
+		padding:5px;
+		font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+		cursor: pointer;
+	}
+	nav.show ul{
+	  width: 100%;
+	  font-size: 16px;
+	}
+	.icon{
+	  width: 45px;
+	  height: 45px;
+	  right: -50px;
+	}
+	nav{
+	  top: 10px;
+	  width: 90%;
+	  right: 10%;
+	}
+  }
